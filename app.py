@@ -3,13 +3,10 @@ import pandas as pd
 import plotly.express as px
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
-from dotenv import load_dotenv
-import os
 
 from chatbot_helper import get_chatbot_response
 
-load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = st.secrets["GOOGLE_API_KEY"]
 
 st.title("Sentiment of Tweets About US Airlines")
 st.sidebar.title("Sentiment of Tweets About US Airlines")
